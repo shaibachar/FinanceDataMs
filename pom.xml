@@ -38,8 +38,8 @@
         </dependency>
         <dependency>
             <groupId>com.yahoofinance-api</groupId>
-            <artifactId>yahoofinance-api</artifactId>
-            <version>3.17.1</version>
+            <artifactId>YahooFinanceAPI</artifactId>
+            <version>3.17.0</version>
         </dependency>
         <dependency>
             <groupId>org.springdoc</groupId>
