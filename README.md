@@ -16,4 +16,4 @@ Spring Boot microservice to collect historical stock and bond data from Yahoo Fi
 mvn spring-boot:run
 ```
 
-Swagger UI available at [http://localhost:8080/swagger-ui.html](http://localhost:8080/swagger-ui.html)
+Swagger UI available at [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
