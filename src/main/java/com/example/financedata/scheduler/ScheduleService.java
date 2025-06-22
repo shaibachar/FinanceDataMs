@@ -7,6 +7,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskScheduler;
 import org.springframework.stereotype.Service;
 
 import jakarta.annotation.PostConstruct;
+
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -42,7 +44,7 @@ public class ScheduleService {
             var data = yahooFinanceService.fetchHistory(isin);
             historicalDataService.saveAll(data);
         };
-        ScheduledFuture<?> future = taskScheduler.scheduleAtFixedRate(task, Instant.now(), periodMs);
+        ScheduledFuture<?> future = taskScheduler.scheduleAtFixedRate(task, Instant.now(), Duration.from(Duration.ofMillis(periodMs)));
         jobs.put(jobName, future);
     }
 
